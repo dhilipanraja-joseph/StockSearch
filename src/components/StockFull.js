@@ -22,10 +22,28 @@ export default class StockFull extends Component {
     this.setState({fullstock : StockStore.getFullStockInfo()});
   }
   render(){
+    if (this.state.fullstock === {}){
+      return (
+        <div>
+
+        </div>
+      )
+    }
+    let { Name , LastPrice , Timestamp , MarketCap , Volume , High , Low , Open} = this.state.fullstock;
     return (
       <div>
-        Full Stock Info
-        {JSON.stringify(this.state.fullstock)}
+       <br/>
+        <p>Full Stock Info</p>
+
+          <p>Company : {Name}</p>
+          <p>Market Cap : {MarketCap}</p>
+          <p>High : {High}</p>
+          <p>Low : {Low}</p>
+          <p>Open : {Open}</p>
+          <p>LastPrice : {LastPrice}</p>
+          <p>Volume : {Volume}</p>
+          <p>Updated At : {Timestamp}</p>
+
       </div>
     )
   }

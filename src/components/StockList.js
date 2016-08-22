@@ -7,7 +7,7 @@ export default class StockList extends Component{
     this.getFullStockInfo = this.getFullStockInfo.bind(this);
   }
   getFullStockInfo(e){
-    console.log(e.target.innerHTML);
+    //console.log(e.target.innerHTML);
     let search = e.target.innerHTML;
     StockActions.getFullStockInfo(search);
   }

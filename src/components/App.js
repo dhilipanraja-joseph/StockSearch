@@ -9,8 +9,8 @@ export default class App extends Component {
       <div className='container text-center'>
         <h1 className="text-center">Stock search App</h1>
         <StockSearchForm/>
-        <ShowResult/>
         <StockFull/>
+        <ShowResult/>
       </div>
     )
   }
