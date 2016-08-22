@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StockActions from '../actions/StockActions'
 
+
 export default class StockSearchForm extends Component {
   constructor(){
     super();
