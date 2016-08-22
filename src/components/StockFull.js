@@ -35,14 +35,14 @@ export default class StockFull extends Component {
        <br/>
         <h3>Full Stock Info</h3>
 
-          <p>Company : {Name}</p>
-          <p>Market Cap : {MarketCap}</p>
-          <p>High : {High}</p>
-          <p>Low : {Low}</p>
-          <p>Open : {Open}</p>
-          <p>LastPrice : {LastPrice}</p>
-          <p>Volume : {Volume}</p>
-          <p>Updated At : {Timestamp}</p>
+          <p>Company : <i>{Name}</i></p>
+          <p>Market Cap : <i>{MarketCap}</i></p>
+          <p>High : <i>{High}</i></p>
+          <p>Low : <i>{Low}</i></p>
+          <p>Open : <i>{Open}</i></p>
+          <p>LastPrice : <i>{LastPrice}</i></p>
+          <p>Volume : <i>{Volume}</i></p>
+          <p>Updated At : <i>{Timestamp}</i></p>
 
       </div>
     )
