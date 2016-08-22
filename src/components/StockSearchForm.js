@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StockActions from '../actions/StockActions'
+import StockFull from './StockFull'
 
 
 export default class StockSearchForm extends Component {

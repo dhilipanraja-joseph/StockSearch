@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StockSearchForm from './StockSearchForm'
 import ShowResult from './ShowResult'
+import StockFull from './StockFull'
 
 export default class App extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends Component {
         <h1 className="text-center">Stock search App</h1>
         <StockSearchForm/>
         <ShowResult/>
+        <StockFull/>
       </div>
     )
   }

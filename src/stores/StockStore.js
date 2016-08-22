@@ -2,7 +2,7 @@ import { EventEmitter } from 'events'
 import AppDispatcher from '../AppDispatcher'
 
 
-let _stockInfo = [];
+let _stockInfo = [],_fullInfo={};
 
 class StockStore extends EventEmitter {
   constructor(){
@@ -16,6 +16,10 @@ class StockStore extends EventEmitter {
                                 this.emit('CHANGE');
                                 break;
 
+
+        case 'RECEIVE_FULL_INFO' : _fullInfo = action.results;
+                                  this.emit('CHANGE');
+                                  break;
       }
     });
   }
@@ -30,6 +34,10 @@ class StockStore extends EventEmitter {
 
   getStockInfo(){
     return _stockInfo;
+  }
+
+  getFullStockInfo(){
+    return _fullInfo;
   }
 }
 
