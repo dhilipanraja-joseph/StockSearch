@@ -22,13 +22,13 @@ export default class StockFull extends Component {
     this.setState({fullstock : StockStore.getFullStockInfo()});
   }
   render(){
-    if (this.state.fullstock === {}){
-      return (
-        <div>
-
-        </div>
-      )
-    }
+    // if (this.state.fullstock === {}){
+    //   return (
+    //     <div>
+    //
+    //     </div>
+    //   )
+    // }
     let { Name , LastPrice , Timestamp , MarketCap , Volume , High , Low , Open} = this.state.fullstock;
     return (
       <div>
