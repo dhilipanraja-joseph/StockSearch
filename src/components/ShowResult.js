@@ -34,6 +34,7 @@ export default class ShowResult extends Component{
         });
     return (
       <div>
+        <h3>Companies Found</h3>
         {StockItems}
       </div>
     )

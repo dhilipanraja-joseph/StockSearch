@@ -16,8 +16,7 @@ export default class StockList extends Component{
     //console.log(itemId[0]);
     return(
       <div>
-        <br/>
-        <p>{Name} : <span onClick={this.getFullStockInfo}>{Symbol}</span></p>
+        <i>{Name} </i>: <span onClick={this.getFullStockInfo}>{Symbol}</span><br/>
       </div>
     )
   }

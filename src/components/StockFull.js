@@ -33,7 +33,7 @@ export default class StockFull extends Component {
     return (
       <div>
        <br/>
-        <p>Full Stock Info</p>
+        <h3>Full Stock Info</h3>
 
           <p>Company : {Name}</p>
           <p>Market Cap : {MarketCap}</p>
