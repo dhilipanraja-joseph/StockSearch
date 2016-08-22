@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StockActions from '../actions/StockActions'
 import StockStore from '../stores/StockStore'
+import StockList from './StockList'
 
 export default class ShowResult extends Component{
   constructor(){
@@ -25,11 +26,15 @@ export default class ShowResult extends Component{
   }
 
   render(){
-    let stocInfo = this.state.stocInfo;
+    //let stocInfo = this.state.stocInfo;
+    const StockItems = this.state.stockInfo.map(info=>{
+          return (
+            <StockList {...info}/>
+          )
+        });
     return (
       <div>
-        <h3>Company Name : {stocInfo.Name}</h3>
-        
+        {StockItems}
       </div>
     )
   }

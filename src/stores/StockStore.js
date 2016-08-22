@@ -2,7 +2,7 @@ import { EventEmitter } from 'events'
 import AppDispatcher from '../AppDispatcher'
 
 
-let _stockInfo = {};
+let _stockInfo = [];
 
 class StockStore extends EventEmitter {
   constructor(){

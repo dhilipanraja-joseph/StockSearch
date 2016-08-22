@@ -3,8 +3,11 @@ import AppDispatcher from './AppDispatcher'
 
 const API ={
   getStock(search){
-    axios.get(`/api/stock/full/${search}`)
-          .then(res=>res.data)
+    axios.get(`/api/stock/${search}`)
+          .then(res=>{
+            console.log(res.data);
+            return res.data;
+          })
           .then(results=>{
                 AppDispatcher.dispatch({
                   type: 'RECEIVE_INFO',
@@ -13,13 +16,13 @@ const API ={
             })
           .catch(err=>console.log(err))
   }
-  getLookup(search){
-    axios.get(`/api/stock/lookup/${search}`)
-          .then(res=>res.data)
-          .then(results=>{
-                AppDispatcher
-          })
-  }
+  // getLookup(search){
+  //   axios.get(`/api/stock/lookup/${search}`)
+  //         .then(res=>res.data)
+  //         .then(results=>{
+  //               AppDispatcher
+  //         })
+  // }
 }
 
 export default API
