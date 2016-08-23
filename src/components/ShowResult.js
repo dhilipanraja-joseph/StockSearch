@@ -27,16 +27,21 @@ export default class ShowResult extends Component{
 
   render(){
     //let stocInfo = this.state.stocInfo;
-    const StockItems = this.state.stockInfo.map(info=>{
+    if (this.state.stockInfo.length == 0){
+      return (<div></div>)
+    }else{
+        const StockItems = this.state.stockInfo.map(info=>{
           return (
             <StockList {...info}/>
           )
         });
-    return (
-      <div>
-        <h3>Companies Found</h3>
-        {StockItems}
-      </div>
-    )
-  }
+        return (
+          <div>
+          <h3>Companies Found</h3>
+          {StockItems}
+          </div>
+        )
+      }
+
+    }
 }

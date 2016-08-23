@@ -10,6 +10,10 @@ export default class StockFull extends Component {
     }
     this._onChange = this._onChange.bind(this);
   }
+  update(e){
+    StockActions.getFullStockInfo(e.target.value);
+    console.log("Requesting update :",e.target.value);
+  }
   componentDidMount(){
     StockStore.startListening(this._onChange);
   }
@@ -29,7 +33,7 @@ export default class StockFull extends Component {
     //     </div>
     //   )
     // }
-    let { Name , LastPrice , Timestamp , MarketCap , Volume , High , Low , Open} = this.state.fullstock;
+    let { Name ,Symbol, LastPrice , Timestamp , MarketCap , Volume , High , Low , Open} = this.state.fullstock;
     return (
       <div>
        <br/>
@@ -43,7 +47,7 @@ export default class StockFull extends Component {
           <p>LastPrice : <i>{LastPrice}</i></p>
           <p>Volume : <i>{Volume}</i></p>
           <p>Updated At : <i>{Timestamp}</i></p>
-
+          <button value={Symbol} onClick={this.update}>Refresh</button>
       </div>
     )
   }

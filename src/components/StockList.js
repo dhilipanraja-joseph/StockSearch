@@ -1,5 +1,7 @@
 import React,{ Component } from 'react'
 import StockActions from '../actions/StockActions'
+import NavLink from './NavLink'
+import StockFull from './StockFull'
 
 export default class StockList extends Component{
   constructor(){
@@ -16,7 +18,7 @@ export default class StockList extends Component{
     //console.log(itemId[0]);
     return(
       <div>
-        <i>{Name} </i>: <span onClick={this.getFullStockInfo}>{Symbol}</span><br/>
+        <i>{Name} </i>: <NavLink onClick={this.getFullStockInfo} to="/stockFull">{Symbol}</NavLink> <br/>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StockActions from '../actions/StockActions'
 import StockFull from './StockFull'
+import ShowResult from './ShowResult'
 
 
 export default class StockSearchForm extends Component {
@@ -32,6 +33,7 @@ export default class StockSearchForm extends Component {
             <input type="text" value={this.state.search} onChange={this.changeSearchInput} placeholder="Enter Company symbol"/>
             <button type="submit">Search</button>
           </form>
+          <ShowResult/>
         </div>
     )
   }
